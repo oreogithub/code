@@ -1,4 +1,4 @@
-package code.lintcode.binarysearch;
+package code.lintcode.binary.binarysearch;
 
 public class FindPeakElement {
 
