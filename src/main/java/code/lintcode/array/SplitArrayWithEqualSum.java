@@ -1,6 +1,8 @@
 package code.lintcode.array;
 
+import java.util.LinkedHashSet;
 import java.util.List;
+import java.util.Set;
 
 public class SplitArrayWithEqualSum {
 
@@ -13,20 +15,27 @@ public class SplitArrayWithEqualSum {
 		// write your code here
 		Integer[] n = (Integer[]) nums.toArray();
 		boolean r = false;
-		for (int j = 3; j < nums.size(); j++) {
-			int i = j - 2, k = j + 2, sa = 0, sb = 0, sc = 0;
-			for (int a = 0; a < i; a++) {
-				sa += n[a];
-			}
-			for (int b = i + 1; b < j; b++) {
-				if (sb > sa)
-					break;
-				sb += n[b];
-			}
-			for (int c = j + 1; c < k; c++) {
-				if (sc > sa)
-					break;
-				sc += n[c];
+		int l = n.length;
+		if (l > 6) {
+			int[] s = new int[l];
+			s[0] = n[0];
+			Set<Integer> er = new LinkedHashSet<Integer>();
+			for (int i = 1; i < s.length; i++)
+				s[i] = n[i] + s[i - 1];
+			for (int j = 3; j < l - 3; j++) {
+				int s1, s2, s3, s4;
+				for (int i = 1; i < j - 1; i++) {
+					s1 = s[i - 1];
+					s2 = s[j - 1] - s[i];
+					if (s1 == s2)
+						er.add(s1);
+				}
+				for (int k = j + 2; k < l - 2; k++) {
+					s3 = s[k - 1] - s[j];
+					s4 = s[l - 1] - s[k];
+					if (s3 == s4 && er.contains(s3))
+						return true;
+				}
 			}
 		}
 		return r;
