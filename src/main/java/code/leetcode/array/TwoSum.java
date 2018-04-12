@@ -9,6 +9,12 @@ public class TwoSum {
 		int[] nums = { 3, 2, 4 };
 		int target = 6;
 		twoSum(nums, target);
+		System.out.println(-1 << 29);
+		System.out.println(0 << 29);
+		System.out.println(1 << 29);
+		System.out.println(2 << 29);
+		System.out.println(3 << 29);
+
 	}
 
 	public static int[] twoSum(int[] nums, int target) {

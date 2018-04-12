@@ -1,6 +1,6 @@
 package code.leetcode.array;
 
-public class Rotate {
+public class RotateArray {
 	public static void main(String[] args) {
 		int[] n = { 1, 2 };
 		rotate(n, 1);
