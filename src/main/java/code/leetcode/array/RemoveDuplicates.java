@@ -9,7 +9,6 @@ public class RemoveDuplicates {
 		for (int i : n) {
 			System.out.println(i);
 		}
-
 	}
 
 	/**
@@ -39,6 +38,15 @@ public class RemoveDuplicates {
 				continue;
 			}
 			n[cur++] = n[i];
+		}
+		return cur;
+	}
+
+	public static int removeDuplicates2(int[] n) {
+		int cur = -1;
+		for (int i = 1; i < n.length; i++) {
+			if (n[i] == n[i - 1]) {
+			}
 		}
 		return cur;
 	}

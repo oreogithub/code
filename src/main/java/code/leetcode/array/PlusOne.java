@@ -18,4 +18,9 @@ public class PlusOne {
 		}
 		return digits;
 	}
+
+	public int[] plusOne2(int[] digits) {
+		
+		return digits;
+	}
 }

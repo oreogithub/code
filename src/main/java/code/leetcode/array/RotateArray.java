@@ -3,7 +3,8 @@ package code.leetcode.array;
 public class RotateArray {
 	public static void main(String[] args) {
 		int[] n = { 1, 2 };
-		rotate(n, 1);
+		rotate2(n, 1);
+		System.out.println();
 	}
 
 	public static void rotate(int[] n, int k) {
@@ -18,9 +19,18 @@ public class RotateArray {
 
 	public static void reverse(int[] n, int s, int e) {
 		for (int i = s, t = e; i < t; i++, t--) {
-			int temp = n[i];
-			n[i] = n[t];
-			n[t] = temp;
+			n[i] ^= n[t];
+			n[t] ^= n[i];
+			n[i] ^= n[t];
 		}
+	}
+
+	public static void rotate2(int[] n, int k) {
+		int l = n.length;
+		k = k % l;
+		int[] temp = new int[l];
+		System.arraycopy(n, 0, temp, 0, l);
+		for (int i = 0; i < temp.length; i++)
+			n[i] = temp[(l - k--) % l];
 	}
 }

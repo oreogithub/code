@@ -26,4 +26,20 @@ public class Intersect {
 			}
 		return Arrays.copyOf(r, k);
 	}
+
+	public static int[] intersect2(int[] nums1, int[] nums2) {
+		int l = Math.min(nums1.length, nums2.length);
+		int[] r = new int[l];
+		int ind = 0;
+		for (int i = 0; i < nums1.length; i++)
+			for (int j = 0; j < nums2.length && nums1[i] != -1; j++) {
+				if (nums2[j] == -1)
+					continue;
+				if (nums1[i] == nums2[j]) {
+					r[ind++] = nums1[i];
+					nums1[i] = nums2[j] = -1;
+				}
+			}
+		return Arrays.copyOf(r, ind);
+	}
 }
