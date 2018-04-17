@@ -32,18 +32,9 @@ public class FirstUniqueChar {
 				map.put(sc[i], map.get(sc[i]) + 1);
 			}
 		}
-		Character[] cs = map.keySet().toArray(new Character[0]);
-		Character index = null;
-		for (int i = 0; i < cs.length; i++)
-			if (map.get(cs[i]) == 1) {
-				index = cs[i];
-				break;
-			}
-		if (index != null) {
-			for (int i = 0; i < sc.length; i++) {
-				if (index == sc[i])
-					return i;
-			}
+		for (int i = 0; i < sc.length; i++) {
+			if (map.get(sc[i]) == 1)
+				return i;
 		}
 		return -1;
 	}
