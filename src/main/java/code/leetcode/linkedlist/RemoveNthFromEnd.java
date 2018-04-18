@@ -19,10 +19,7 @@ public class RemoveNthFromEnd {
 			list.add(next);
 		}
 		ListNode temp = list.get(list.size() - n - 1);
-		if (n == list.size()) {
-			head.next = null;
-			head = temp;
-		} else if (n == 1) {
+		if (n == 1) {
 			temp.next = null;
 		} else {
 			ListNode nn = temp.next;
