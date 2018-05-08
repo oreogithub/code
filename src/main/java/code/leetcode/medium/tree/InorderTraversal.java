@@ -17,8 +17,12 @@ public class InorderTraversal {
 		TreeNode cur = null;
 		while (!queue.isEmpty()) {
 			cur = queue.poll();
-			if (cur.left != null)
+			if (cur.left != null) {
+				queue.add(cur.left);
+				cur.left = null;
 				queue.add(cur);
+			} else
+				list.add(cur.val);
 			if (cur.right != null)
 				queue.add(cur.right);
 		}
