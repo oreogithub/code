@@ -1,5 +1,7 @@
 package code.leetcode.easy.linkedlist;
 
+import code.leetcode.ListNode;
+
 public class MergeTwoLists {
 	public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
 		if (l1 == null)

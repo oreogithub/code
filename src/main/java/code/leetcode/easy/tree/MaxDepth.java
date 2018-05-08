@@ -1,5 +1,7 @@
 package code.leetcode.easy.tree;
 
+import code.leetcode.TreeNode;
+
 public class MaxDepth {
 	public int maxDepth(TreeNode root) {
 		int rnum = 1, lnum = 1;

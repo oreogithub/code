@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import code.leetcode.TreeNode;
+
 public class IsValidBST {
 
 	public boolean isValidBST2(TreeNode root) {

@@ -6,6 +6,8 @@ import java.io.InputStreamReader;
 import java.util.LinkedList;
 import java.util.Queue;
 
+import code.leetcode.TreeNode;
+
 public class SortedArrayToBST {
 
 	public static int[] stringToIntegerArray(String input) {

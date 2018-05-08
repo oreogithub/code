@@ -3,6 +3,8 @@ package code.leetcode.easy.linkedlist;
 import java.util.ArrayList;
 import java.util.List;
 
+import code.leetcode.ListNode;
+
 public class RemoveNthFromEnd {
 
 	public static void main(String[] args) {

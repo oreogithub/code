@@ -8,6 +8,8 @@ import java.util.LinkedList;
 import java.util.List;
 import java.util.Queue;
 
+import code.leetcode.TreeNode;
+
 public class LevelOrder {
 	public List<List<Integer>> levelOrder(TreeNode root) {
 		List<List<Integer>> list = new ArrayList<List<Integer>>();

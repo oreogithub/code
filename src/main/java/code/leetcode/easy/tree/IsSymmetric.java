@@ -5,6 +5,8 @@ import java.util.Queue;
 
 import com.sun.jmx.remote.internal.ArrayQueue;
 
+import code.leetcode.TreeNode;
+
 public class IsSymmetric {
 	public boolean isSymmetric(TreeNode root) {
 		if (root == null)

@@ -1,5 +1,7 @@
 package code.leetcode.easy.linkedlist;
 
+import code.leetcode.ListNode;
+
 public class HasCycle {
 	public boolean hasCycle(ListNode head) {
 		if (head == null || head.next == null)

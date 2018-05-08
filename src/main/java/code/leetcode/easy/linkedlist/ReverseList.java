@@ -1,5 +1,7 @@
 package code.leetcode.easy.linkedlist;
 
+import code.leetcode.ListNode;
+
 public class ReverseList {
 
 	public static void main(String[] args) {
